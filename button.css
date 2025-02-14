@@ -1,0 +1,73 @@
+/* color-* */
+button.color-primary{background-color: var(--purple); border: var(--purple) 2px solid;color: var(--background);} button.color-primary:focus {filter: brightness(0.9););}
+button.color-secondary{background-color: var(--comment); border: var(--comment) 2px solid;color: var(--foreground);}
+button.color-warn{background-color: var(--yellow); border: var(--yellow) 2px solid;color: var(--red);}
+button.color-danger{background-color: var(--red); border: var(--red) 2px solid;color: var(--foreground);}
+button.color-sad{background-color: var(--cyan); border: var(--cyan) 2px solid;color: var(--background);}
+button.color-success{background-color: var(--green); border: var(--green) 2px solid;color: var(--background);}
+button.color-friendly{background-color: var(--pink); border: var(--pink) 2px solid;color: var(--cyan)}
+/* size */
+button.tiny{padding: 2px 2px 3px 2px; font-size: smaller;}
+button.small{padding: 3px 5px; font-size: small;}
+button.medium{padding: 6px 12px;}
+button.xmedium{padding: 8px 14px;}
+button.big{padding: 8px 14px;font-size: large;}
+button.xbig{padding: 8px 14px;font-size: x-large;}
+button.xxbig{padding: 10px 16px;font-size: xx-large;}
+button.xxxbig{padding: 10px 16px;font-size: xxx-large;}
+button.full-width{width: 100%}
+/* radius */
+button.round{border-radius: 3px;}
+button.x-round{border-radius: 6px;}
+button.xx-round{border-radius: 10px;}
+button.xxx-round{border-radius: 13px;}
+button.full-round{border-radius: 100px;}
+button.circle{border-radius: 50%;aspect-ratio:1;font-family: monospace}
+    button.circle.tiny{padding: 2px}
+    button.circle.small{padding: 3px}
+    button.circle.medium{padding: 6px}
+    button.circle.xmedium,button.circle.big,button.circle.xbig{padding: 8px}
+    button.circle.xxbig,button.circle.xxxbig{padding: 10px}
+/* wall */
+button.wall-ghost{border: none; background-color: transparent;} button.wall-ghost:hover{text-decoration: underline; text-underline-offset: 3px;}
+    button.wall-ghost.color-primary{color: var(--purple);filter: none;}
+    button.wall-ghost.color-secondary{color: var(--comment);filter: none;}
+    button.wall-ghost.color-warn{color: var(--yellow);filter: none;}
+    button.wall-ghost.color-danger{color: var(--red);filter: none;}
+    button.wall-ghost.color-sad{color: var(--cyan);filter: none;}
+    button.wall-ghost.color-success{color: var(--green);filter: none;}
+    button.wall-ghost.color-friendly{color: var(--pink);filter: none;}
+button.wall-saber{background-color: transparent;filter: none;}                                           button.wall-saber:hover{background-color: var(--qaurter-current-line);}
+    button.wall-saber.color-primary{color: var(--purple);filter: none; border-color: var(--purple)}        button.wall-saber.color-primary:hover{background-color: var(--qaurter-purple);}
+    button.wall-saber.color-secondary{color: var(--comment);filter: none; border-color: var(--comment)}  button.wall-saber.color-secondary:hover{background-color: var(--qaurter-comment)}
+    button.wall-saber.color-warn{color: var(--red);filter: none; border-color: var(--yellow)}            button.wall-saber.color-warn:hover{background-color: var(--qaurter-yellow)}
+    button.wall-saber.color-danger{color: var(--red); border-color: var(--red)}                          button.wall-saber.color-danger:hover{background-color: var(--qaurter-red)}
+    button.wall-saber.color-sad{color: var(--cyan); border-color: var(--cyan)}                           button.wall-saber.color-sad:hover{background-color: var(--qaurter-cyan)}
+    button.wall-saber.color-success{color: var(--green); border-color: var(--green)}                           button.wall-saber.color-sad:hover{background-color: var(--qaurter-green)}
+    button.wall-saber.color-friendly{color: var(--pink); border-color: var(--pink)}                           button.wall-saber.color-sad:hover{background-color: var(--qaurter-pink)}
+button.wall-soft{background-color: var(--qaurter-current-line);border-color: var(--qaurter-current-line);color: var(--foreground);}
+    button.wall-soft.color-primary {background-color: var(--qaurter-purple); border-color: var(--high-purple);color: var(--purple);}
+    button.wall-soft.color-secondary {background-color: var(--qaurter-comment); border-color: var(--high-comment);color: var(--comment);}
+    button.wall-soft.color-warn {background-color: var(--qaurter-yellow); border-color: var(--high-yellow);color: var(--red);}
+    button.wall-soft.color-danger {background-color: var(--qaurter-red); border-color: var(--high-red);color: var(--red);}
+    button.wall-soft.color-sad {background-color: var(--qaurter-cyan); border-color: var(--high-cyan);color: var(--cyan);}
+    button.wall-soft.color-success {background-color: var(--qaurter-green); border-color: var(--high-green);color: var(--green);}
+    button.wall-soft.color-friendly {background-color: var(--qaurter-pink); border-color: var(--high-pink);color: var(--pink);}
+    /* TODO */
+button.disable{filter: brightness(0.5) !important;cursor: not-allowed} button.disable:hover{filter: brightness(0.3);}
+button.disable.wall-ghost,button.disable.wall-saber{filter: brightness(0.9) !important;cursor: not-allowed} button.disable.wall-ghost:hover,button.disable.wall-saber:hover{filter: brightness(0.8);}
+button.disable.strike{text-decoration: line-through var(--high-red) 3px} button.disable.strike:hover,button.disable.strike:focus{ text-decoration: underline wavy var(--high-red) 2px; }
+
+.group-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button {left: 0;right: 0}
+    button:first-child {border-top-right-radius: 0;border-bottom-right-radius: 0;}
+    button:last-child {border-top-left-radius: 0;border-bottom-left-radius: 0;}
+    button:nth-child(1n):not(:first-child):not(:last-child) {border-radius: 0;}
+    button:nth-child(2n +1){filter: saturate(1)}
+    p {margin: 0 10px 0 0;padding: 0; font-weight: bolder; color: var(--purple);}
+}
+.group-buttons.even { button:nth-child(2n){filter: brightness(1.3)} }
+.group-buttons.even-bright { button:nth-child(2n){filter: brightness(1.6)} }
